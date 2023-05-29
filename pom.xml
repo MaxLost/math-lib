@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.math</groupId>
+    <artifactId>math-lib</artifactId>
+    <version>0.0.1</version>
+    <name>math-lib</name>
+    <description>math library</description>
+    <packaging>pom</packaging>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>lib</id>
+            <name>lib</name>
+            <url>file://${project.basedir}/lib/</url>
+        </repository>
+    </repositories>
+
+    <modules>
+        <module>restinterface</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
